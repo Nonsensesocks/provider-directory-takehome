@@ -15,14 +15,23 @@ function BrowseProviders({locations, selectedLocation, localProviders, setSelect
   return (
     <div className="App">
         <div>
-            <Header toggleMenu={toggleMenu} location={selectedLocation}/>
+            <Header 
+              toggleMenu={toggleMenu}
+              location={selectedLocation}
+            />
         </div>
         {menuState && 
         <div className="location-menu">
-            <LocationMenu locations={locations} selectLocation={(location) => setSelectedLocation(location)}/>
+            <LocationMenu
+              locations={locations}
+              selectLocation={(location) => setSelectedLocation(location)}
+            />
         </div>
         }
-      <ProvidersList location={selectedLocation} localProviders={localProviders}/>
+      <ProvidersList
+        location={selectedLocation}
+        localProviders={localProviders}
+      />
     </div>
   );
 }

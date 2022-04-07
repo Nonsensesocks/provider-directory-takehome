@@ -25,7 +25,11 @@ function ProviderMini(props){
     <div className="provider-container" onClick={props.onClick}>
         <div className="provider-header">
             <div className="avatar-container">
-                <Avatar alt={provider.name} src={avatarUrl} className="avatar"/>
+                <Avatar
+                  alt={provider.name}
+                  src={avatarUrl}
+                  className="avatar"
+                />
             </div>
             <div className="provider-name-title">
                 {provider.name}, {provider.title}

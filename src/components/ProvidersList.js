@@ -18,9 +18,9 @@ function ProviderList(props){
                 <div className="cards">
                     {(localProviders || []).map((provider, key) =>
                         <ProviderMini 
-                            provider={provider}
-                            key={key} 
-                            onClick={() => openProvider(provider)
+                          provider={provider}
+                          key={key} 
+                          onClick={() => openProvider(provider)
                         }/>
                     )}
                 </div>

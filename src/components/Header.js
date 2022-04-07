@@ -7,7 +7,10 @@ function Header({toggleMenu, location}) {
         <div className="header" >
           <p className="title">Browse our providers</p>
           <p className="subtitle">Mental Wellness</p>
-          <Location selectedLocation={location} locationClick={() => toggleMenu()}/>
+          <Location
+            selectedLocation={location} 
+            locationClick={() => toggleMenu()}
+          />
         </div>
       </header>
     </div>

@@ -18,7 +18,11 @@ function Location({selectedLocation, locationClick}) {
     return (
     <div className="container" onClick={() => locationClick()} >
         <div className="location">
-            <LocationOn className="icon" color="primary" fontSize="13px"/>
+            <LocationOn
+              className="icon"
+              color="primary"
+              fontSize="13px"
+            />
             <label>
                 {selectedLocation && locationAbbr()}
             </label>
