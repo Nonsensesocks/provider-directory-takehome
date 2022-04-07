@@ -1,15 +1,13 @@
 import Location from './Location'
 
-function Header(props) {
-  const { locations } = props
-
+function Header({locations, toggleMenu}) {
   return (
     <div>
       <header className="app-header">
         <div className="header" >
           <p className="title">Browse our providers</p>
           <p className="subtitle">Mental Wellness</p>
-          <Location selectedLocation="ON" locations={locations}/>
+          <Location selectedLocation="ON" locations={locations} locationClick={() => toggleMenu()}/>
         </div>
       </header>
     </div>

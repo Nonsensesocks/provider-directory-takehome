@@ -8,7 +8,6 @@ function LocationMenu(props) {
 
   return (
     <div>
-      <div className="location-menu">
         <MenuList dense>
           {(locations || []).map((location, key) =>
               <MenuItem  key={key}>
@@ -16,7 +15,6 @@ function LocationMenu(props) {
               </MenuItem>
           )}
         </MenuList>
-      </div>
     </div>
   )
 }

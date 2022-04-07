@@ -39,3 +39,10 @@
     padding-top: 10px;
   }
   
+  .location-menu {
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 100px;
+    margin-left: 20%;
+    z-index:999;
+  }
