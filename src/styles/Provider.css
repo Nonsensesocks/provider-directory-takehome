@@ -66,3 +66,7 @@
 .avatar {
     border: 2px solid white;
 }
+
+.loading {
+    padding: 10px;
+}

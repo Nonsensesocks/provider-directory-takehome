@@ -4,8 +4,7 @@ import ProvidersList from '../components/ProvidersList'
 import LocationMenu from '../components/LocationMenu'
 import { useState } from 'react';
 
-function BrowseProviders(props) {
-  const {locations, localProviders} = props
+function BrowseProviders({locations, selectedLocation, localProviders, setSelectedLocation}) {
   const [menuState, setMenuState] = useState(false);
 
   function toggleMenu() {
@@ -16,14 +15,14 @@ function BrowseProviders(props) {
   return (
     <div className="App">
         <div>
-            <Header locations={locations} toggleMenu={toggleMenu}/>
+            <Header toggleMenu={toggleMenu} location={selectedLocation}/>
         </div>
         {menuState && 
         <div className="location-menu">
-            <LocationMenu locations={locations}/>
+            <LocationMenu locations={locations} selectLocation={(location) => setSelectedLocation(location)}/>
         </div>
         }
-      <ProvidersList providers={localProviders} />
+      <ProvidersList location={selectedLocation} localProviders={localProviders}/>
     </div>
   );
 }

@@ -1,19 +1,20 @@
 import './App.css';
-import { fetchProviderLocation, fetchProviders } from "./api";
+import { fetchProviderLocation,fetchProviders} from "./api";
 import { useState, useEffect } from 'react';
 import BrowseProviders from './pages/BrowseProviders'
 
 function App() {
-  const selectedLocation = 'Ontario'
+  const defaultLocation = 'Ontario'
   const [locations, setLocationOptions] = useState();
   const [localProviders, setLocalProviders] = useState();
+  const [selectedLocation, setSelectedLocation] = useState(defaultLocation);
   
   useEffect(() => {
-    // get list of provinces for location dropdown
+    // Gets locations from the mock data to display in location dropdowns
     fetchProviderLocation().then((result) => setLocationOptions(result));
-
+    // Fetch providers, then filter the results based on the selected location
     fetchProviders().then((result) => {
-        const filtered = result.filter(({location}) => (location.split(',')[1]).trim() === selectedLocation)
+        const filtered = result.filter(({location}) => (location.split(',')[1]).trim() === defaultLocation)
         setLocalProviders(filtered)
       }
     );
@@ -21,7 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      <BrowseProviders locations={locations} localProviders={localProviders}/>
+      <BrowseProviders
+        locations={locations}
+        selectedLocation={selectedLocation}
+        localProviders={localProviders}
+        setSelectedLocation={setSelectedLocation}
+      />
     </div>
   );
 }
