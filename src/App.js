@@ -1,8 +1,7 @@
 import './App.css';
 import { fetchProviderLocation, fetchProviders } from "./api";
 import { useState, useEffect } from 'react';
-import Header from './components/Header'
-import ProvidersList from './components/ProvidersList'
+import BrowseProviders from './pages/BrowseProviders'
 
 function App() {
   const selectedLocation = 'Ontario'
@@ -22,8 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header locations={locations}/>
-      <ProvidersList providers={localProviders} />
+      <BrowseProviders locations={locations} localProviders={localProviders}/>
     </div>
   );
 }
