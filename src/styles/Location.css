@@ -1,0 +1,42 @@
+.container {
+  max-width: 3.7em;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+
+  background: #FFFFFF;
+  color: #3F4145;
+
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 94px;
+
+  align-items: baseline;
+
+  max-height: 1.5em;
+}
+
+.location:hover {
+  z-index:1;
+  background-color: #e6e7ec;
+  cursor: pointer;
+}
+
+.icon {
+  padding-top: 3px;
+  max-width: 1.5em;
+  color: #6277F0;
+}
+
+label {
+  margin-bottom: 2px;
+}
+
+.location-menu {
+  width:fit-content;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
