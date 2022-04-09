@@ -1,5 +1,6 @@
 import '../styles/Provider.css';
 import Avatar from '@mui/material/Avatar';
+import { bioFormatter } from '../utility/formatter';
 
 function ProviderMini({ provider, clickProvider }){
     const { availability, avatarUrl, bio } = provider
@@ -16,17 +17,6 @@ function ProviderMini({ provider, clickProvider }){
         }
     }
 
-    function bioPresenter() {
-        //trim the string to the maximum length
-        var trimmedString = bio.substr(0, 165);
-
-        //re-trim if we are in the middle of a word
-        trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-        const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-        trimmedString = trimmedString.slice(0).replace(regex, '');
-        return trimmedString + '...';
-    }
-    
     return (
     <div className="provider-container" onClick={clickProvider}>
         <div className="provider-header">
@@ -45,7 +35,7 @@ function ProviderMini({ provider, clickProvider }){
             </div>
         </div>
         <div className="bio">
-            {bioPresenter()}
+            {bioFormatter(bio, 165)}
         </div>
         <div className="availability">
             {availabilityPresenter()}
