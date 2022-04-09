@@ -1,4 +1,4 @@
-export function bioFormatter(string, length) {
+export function truncateText(string, length) {
     const punctuationRegex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
     if(string.length > length) {
         //trim the string to the maximum length
