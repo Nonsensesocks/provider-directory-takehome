@@ -16,7 +16,7 @@ function Location({selectedLocation, locationClick}) {
   }
 
     return (
-    <div className="container" onClick={() => locationClick()} >
+    <div className="container" onClick={locationClick} >
         <div className="location">
             <LocationOn
               className="icon"

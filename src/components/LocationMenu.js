@@ -13,7 +13,7 @@ function LocationMenu({locations, selectLocation}) {
                 key={key}
                 onClick={() => selectLocation(location)}
               >
-                  <ListItemText>{location}</ListItemText>
+                <ListItemText>{location}</ListItemText>
               </MenuItem>
           )}
         </MenuList>
