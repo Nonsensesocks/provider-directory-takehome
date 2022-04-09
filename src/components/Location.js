@@ -1,21 +1,32 @@
 import '../styles/Location.css';
-import LocationMenu from './LocationMenu'
 import LocationOn from '@mui/icons-material/LocationOn';
-import { useState } from 'react';
 
-function Location({selectedLocation, locations}) {
-    let show = true;
-    const [menuState, setMenuState] = useState(false);
+function Location({selectedLocation, locationClick}) {
+  function locationAbbr(){
+      switch (selectedLocation) {
+      case('Ontario'):
+          return 'ON'
+      case('Quebec'):
+          return 'QC';
+      case('Alberta'):
+          return 'AB';
+      default:
+          return 'ON';
+      }
+  }
 
     return (
-    <div className="container" onClick={() => setMenuState(!menuState)} >
+    <div className="container" onClick={locationClick} >
         <div className="location">
-            <LocationOn className="icon" color="primary" fontSize="13px"/>
+            <LocationOn
+              className="icon"
+              color="primary"
+              fontSize="13px"
+            />
             <label>
-                {selectedLocation}
+                {selectedLocation && locationAbbr()}
             </label>
         </div>
-        {menuState && <LocationMenu locations={locations} show={show}/>}
     </div>
     )
   }

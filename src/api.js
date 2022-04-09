@@ -48,7 +48,7 @@
    return new Promise(
      (resolve) => setTimeout(
        () => {
-         const locations = fullDataset.map(({location}) => (location.split(',')[1]))
+         const locations = fullDataset.map(({location}) => (location.split(',')[1]).trim())
          function removeDuplicates(locations) {
            return locations.sort().filter(function(item, pos, ary) {
                return !pos || item !== ary[pos - 1];
@@ -61,24 +61,6 @@
      )
    )
  };
- 
- // Fetch providers by selected location, this will be called when the user selects a location from the main header
- // and return only the providers from the selected area
- // export const fetchProviderByLocation = (selectedLocation) => {
- //   return new Promise(
- //     (resolve, reject) => setTimeout(
- //       () => {
- //         const providersByLocation = fullDataset.filter(({location}) => (location.split(',')[1]).trim() === selectedLocation)
- //         if (providersByLocation) {
- //           resolve(providersByLocation)
- //         } else {
- //           reject(`No providers available from this location`)
- //         }
- //       },
- //       REQUEST_RESPONSE_TIME
- //     )
- //   )
- // };
  
  const fullDataset = [
    {

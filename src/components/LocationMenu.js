@@ -3,20 +3,20 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 
-function LocationMenu(props) {
-  const { locations } = props
+function LocationMenu({locations, selectLocation}) {
 
   return (
     <div>
-      <div className="location-menu">
-        <MenuList dense>
+        <MenuList>
           {(locations || []).map((location, key) =>
-              <MenuItem  key={key}>
-                  <ListItemText>{location}</ListItemText>
+              <MenuItem
+                key={key}
+                onClick={() => selectLocation(location)}
+              >
+                <ListItemText>{location}</ListItemText>
               </MenuItem>
           )}
         </MenuList>
-      </div>
     </div>
   )
 }

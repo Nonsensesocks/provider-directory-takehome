@@ -1,35 +1,30 @@
 import '../styles/Provider.css';
 import ProviderMini from './ProviderMini';
 
-function ProviderList(props){
-    const {providers} = props
-    const numberOfProviders = providers ? providers.length : false
-
-    function openProvider(provider) {
-        console.log(provider)
-    }
-
+function ProviderList({location, localProviders, openProvider}){
+    const numberOfProviders = localProviders ? localProviders.length : false
+    
     if(numberOfProviders > 0) {
         return (
             <div className="list">
                 <div className="provider-count">
-                    {numberOfProviders} providers in Ontario
+                    {numberOfProviders} providers in {location}
                 </div>
                 <div className="cards">
-                    {(providers || []).map((provider, key) =>
+                    {(localProviders || []).map((provider, key) =>
                         <ProviderMini 
-                            provider={provider}
-                            key={key} 
-                            onClick={() => openProvider(provider)
-                        }/>
+                          provider={provider}
+                          key={key} 
+                          clickProvider={() => openProvider(provider)}
+                        />
                     )}
                 </div>
             </div>
             )
     } else {
         return (
-            <div>
-                Loading
+            <div className="loading">
+                Loading Providers 
             </div>
         )
     }
