@@ -17,7 +17,14 @@ function ProviderMini({ provider, clickProvider }){
     }
 
     function bioPresenter() {
-        return bio.substring(0, 175);
+        //trim the string to the maximum length
+        var trimmedString = bio.substr(0, 165);
+
+        //re-trim if we are in the middle of a word
+        trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+        const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+        trimmedString = trimmedString.slice(0).replace(regex, '');
+        return trimmedString + '...';
     }
     
     return (
