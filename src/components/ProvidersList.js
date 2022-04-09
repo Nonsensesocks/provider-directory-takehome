@@ -1,14 +1,9 @@
 import '../styles/Provider.css';
 import ProviderMini from './ProviderMini';
 
-function ProviderList(props){
-    const {location, localProviders} = props
-
+function ProviderList({location, localProviders, openProvider}){
     const numberOfProviders = localProviders ? localProviders.length : false
-    function openProvider(provider) {
-        console.log(provider)
-    }
-
+    
     if(numberOfProviders > 0) {
         return (
             <div className="list">
@@ -20,8 +15,8 @@ function ProviderList(props){
                         <ProviderMini 
                           provider={provider}
                           key={key} 
-                          onClick={() => openProvider(provider)
-                        }/>
+                          clickProvider={() => openProvider(provider)}
+                        />
                     )}
                 </div>
             </div>

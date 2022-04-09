@@ -1,8 +1,7 @@
 import '../styles/Provider.css';
 import Avatar from '@mui/material/Avatar';
 
-function ProviderMini(props){
-    const { provider } = props
+function ProviderMini({ provider, clickProvider }){
     const { availability, avatarUrl, bio } = provider
 
     function availabilityPresenter() {
@@ -22,7 +21,7 @@ function ProviderMini(props){
     }
     
     return (
-    <div className="provider-container" onClick={props.onClick}>
+    <div className="provider-container" onClick={clickProvider}>
         <div className="provider-header">
             <div className="avatar-container">
                 <Avatar
@@ -33,9 +32,9 @@ function ProviderMini(props){
             </div>
             <div className="provider-name-title">
                 {provider.name}, {provider.title}
-            </div>
-            <div className="provider-desi">
-                {provider.designation}
+                <div className="provider-desi">
+                    {provider.designation}
+                </div>
             </div>
         </div>
         <div className="bio">
