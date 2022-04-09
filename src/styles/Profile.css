@@ -54,6 +54,22 @@
   color: #3F4145;
 }
 
+.breadLink {
+  font-size: 0.75rem;
+  color: #6E7178
+}
+
+.breadCurrent {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6E7178;
+}
+
+.breadLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 Button {
   color: #4B286D;
 }
