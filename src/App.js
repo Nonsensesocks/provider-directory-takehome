@@ -31,6 +31,10 @@ function App() {
       fetchProvider(selectedProvider.id).then((result) => setSelectedProvider(result))
     }
   }, [selectedProvider])
+
+  useEffect(() => {
+    setPage(page)
+  }, [page])
   
   function openProvider(selProvider) {
     setPage('viewProvider')
@@ -52,7 +56,10 @@ function App() {
   } else if (page === 'viewProvider') {
     return (
       <div>
-        <ProviderProfile provider={selectedProvider}/>
+        <ProviderProfile
+          provider={selectedProvider}
+          setPage={setPage}
+        />
       </div>
     )
   }

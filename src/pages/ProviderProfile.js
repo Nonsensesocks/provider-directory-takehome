@@ -1,12 +1,12 @@
 import '../styles/Profile.css';
 import defaultImage from '../resource/profile.jpg';
+import BreadNavigation from '../components/BreadNavigation.js'
 import { Button } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import MapIcon from '@mui/icons-material/Map';
 import SchoolIcon from '@mui/icons-material/School';
 
-function ProviderProfile(props) {
-    const {provider} = props
+function ProviderProfile({ provider, setPage }) {
     const { 
         education,
         languages,
@@ -20,8 +20,13 @@ function ProviderProfile(props) {
     function bioPresenter() {
         return bio.substring();
     }
+
     return (
     <div className="profile-container">
+        <BreadNavigation
+            profileTitle={`${providerName}, ${title}`}
+            setPage={setPage}
+        />
         <div className="flex">
             <img src={defaultImage} alt="profile" className="profile-image"/>
             <div className="card">
