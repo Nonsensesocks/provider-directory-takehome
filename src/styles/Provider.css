@@ -5,7 +5,7 @@
 .provider-container {
     background-color: #FFFFFF;
     margin-bottom: 5px;
-    padding: 10px;
+    padding: 10px 10px 13px 10px;
 }
 .provider-container:hover {
     background-color: #e6e7ec;
@@ -46,20 +46,21 @@
 }
 
 .provider-name-title {
-    padding-left: 5px;
+    color: #1C1E24;
+    padding-left: 10px;
 }
 
 .provider-desi {
     font-size: 10px;
+    color: #6E7178;
+    padding-top:3px;
 }
 
 .bio {
   font-size: 0.75rem;
   font-weight: 400;
   color: #6E7178;
-  text-align: start;
-
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .avatar-container {

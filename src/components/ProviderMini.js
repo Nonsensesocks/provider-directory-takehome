@@ -1,5 +1,6 @@
 import '../styles/Provider.css';
 import Avatar from '@mui/material/Avatar';
+import { truncateText } from '../utility/formatter';
 
 function ProviderMini({ provider, clickProvider }){
     const { availability, avatarUrl, bio } = provider
@@ -16,10 +17,6 @@ function ProviderMini({ provider, clickProvider }){
         }
     }
 
-    function bioPresenter() {
-        return bio.substring(0, 175);
-    }
-    
     return (
     <div className="provider-container" onClick={clickProvider}>
         <div className="provider-header">
@@ -38,7 +35,7 @@ function ProviderMini({ provider, clickProvider }){
             </div>
         </div>
         <div className="bio">
-            {bioPresenter()}
+            {truncateText(bio, 165)}
         </div>
         <div className="availability">
             {availabilityPresenter()}
