@@ -1,6 +1,7 @@
 import '../styles/Profile.css';
 import defaultImage from '../resource/profile.jpg';
 import BreadNavigation from '../components/BreadNavigation.js'
+import ReadMore from '../components/ReadMore.js'
 import { Button } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import MapIcon from '@mui/icons-material/Map';
@@ -16,10 +17,6 @@ function ProviderProfile({ provider, setPage }) {
         name: providerName,
         title,
     } = provider
-
-    function bioPresenter() {
-        return bio.substring();
-    }
 
     return (
     <div className="profile-container">
@@ -39,9 +36,7 @@ function ProviderProfile({ provider, setPage }) {
                     <div className="profile-desi">
                         {designation}
                     </div>
-                    <div className="bio">
-                        {bioPresenter()}
-                    </div>
+                    <ReadMore text={bio} />
                 </div>
                 <div className="bot-card">
                     <div>
