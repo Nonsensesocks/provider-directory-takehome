@@ -22,7 +22,6 @@ function ProviderMini({ provider, clickProvider }){
         <div className="provider-header">
             <div className="avatar-container">
                 <Avatar
-                  alt={provider.name}
                   src={avatarUrl}
                   className="avatar"
                 />
