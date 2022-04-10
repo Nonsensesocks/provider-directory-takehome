@@ -18,7 +18,7 @@ function ProviderProfile({ provider, setPage }) {
             name: providerName,
             title,
         } = provider
-
+        
         function languagePresenter(){
             if(languages && languages.length > 1) {
                 return languages.join(", ");
