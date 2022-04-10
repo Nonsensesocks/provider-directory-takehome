@@ -8,7 +8,7 @@ function ProviderList({location, localProviders, openProvider}){
         return (
             <div className="list">
                 <div className="provider-count">
-                    {numberOfProviders} providers in {location}
+                    <span className="count">{numberOfProviders}</span> providers in {location}
                 </div>
                 <div className="cards">
                     {(localProviders || []).map((provider, key) =>
