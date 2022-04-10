@@ -1,5 +1,6 @@
 import '../styles/Provider.css';
 import ProviderMini from './ProviderMini';
+import Loading from './Loading';
 
 function ProviderList({location, localProviders, openProvider}){
     const numberOfProviders = localProviders ? localProviders.length : false
@@ -23,9 +24,7 @@ function ProviderList({location, localProviders, openProvider}){
             )
     } else {
         return (
-            <div className="loading">
-                Loading Providers 
-            </div>
+            <Loading message="Loading Providers" />
         )
     }
   }

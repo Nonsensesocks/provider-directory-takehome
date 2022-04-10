@@ -1,4 +1,4 @@
-import Location from './Location'
+import LocationChip from './LocationChip'
 
 function Header({toggleMenu, location}) {
   return (
@@ -7,7 +7,7 @@ function Header({toggleMenu, location}) {
         <div className="header" >
           <p className="title">Browse our providers</p>
           <p className="subtitle">Mental Wellness</p>
-          <Location
+          <LocationChip
             selectedLocation={location} 
             locationClick={() => toggleMenu()}
           />

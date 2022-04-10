@@ -10,6 +10,7 @@ function App() {
   const [localProviders, setLocalProviders] = useState();
   const [selectedLocation, setSelectedLocation] = useState('Ontario');
   const [selectedProvider, setSelectedProvider] = useState();
+  const [fullProvider, setFullProvider] = useState();
   
   useEffect(() => {
     fetchProviderLocation().then((result) => setLocationOptions(result));
@@ -27,7 +28,7 @@ function App() {
 
   useEffect(() => {
     if (selectedProvider) {
-      fetchProvider(selectedProvider.id).then((result) => setSelectedProvider(result))
+      fetchProvider(selectedProvider.id).then((result) => setFullProvider(result))
     }
   }, [selectedProvider])
 
@@ -36,8 +37,11 @@ function App() {
   }, [page])
   
   function openProvider(selProvider) {
-    setPage('viewProvider')
+    if(!fullProvider || selProvider.id !== fullProvider.id) {
+      setFullProvider()
+    }
     setSelectedProvider(selProvider)
+    setPage('viewProvider')
     document.documentElement.scrollTop = 0;
   }
 
@@ -57,11 +61,11 @@ function App() {
     return (
       <div>
         <ProviderProfile
-          provider={selectedProvider}
+          provider={fullProvider}
           setPage={setPage}
         />
       </div>
-    )
+    );
   }
 }
 

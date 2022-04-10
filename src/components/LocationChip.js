@@ -1,7 +1,7 @@
 import '../styles/Location.css';
 import LocationOn from '@mui/icons-material/LocationOn';
 
-function Location({selectedLocation, locationClick}) {
+function LocationChip({selectedLocation, locationClick}) {
   function locationAbbr(){
       switch (selectedLocation) {
       case('Ontario'):
@@ -31,4 +31,4 @@ function Location({selectedLocation, locationClick}) {
     )
   }
   
-  export default Location;
+  export default LocationChip;
