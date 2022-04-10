@@ -11,16 +11,15 @@ function App() {
   const [selectedLocation, setSelectedLocation] = useState('Ontario');
   const [selectedProvider, setSelectedProvider] = useState();
   
-  // useEffect causes these functions to only be called once
   useEffect(() => {
-    // Gets locations from the mock data to display in location menu dropdown
     fetchProviderLocation().then((result) => setLocationOptions(result));
   }, [])
 
   useEffect(() => {
-    // Fetch providers, then filter the results based on the selected location
     fetchProviders().then((result) => {
-        const filtered = result.filter(({location}) => (location.split(',')[1]).trim() === selectedLocation)
+        const filtered = result.filter(
+          ({location}) => (location.split(',')[1]).trim() === selectedLocation
+        )
         setLocalProviders(filtered)
       }
     );
@@ -39,6 +38,7 @@ function App() {
   function openProvider(selProvider) {
     setPage('viewProvider')
     setSelectedProvider(selProvider)
+    document.documentElement.scrollTop = 0;
   }
 
   if(page === 'browseProviders') {
