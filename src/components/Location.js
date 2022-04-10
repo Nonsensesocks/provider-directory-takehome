@@ -20,7 +20,7 @@ function Location({selectedLocation, locationClick}) {
         <div className="location">
             <LocationOn
               className="icon"
-              color="primary"
+              htmlColor='#6277F0'
               fontSize="13px"
             />
             <label>

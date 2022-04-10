@@ -28,7 +28,7 @@ function ProviderMini({ provider, clickProvider }){
             </div>
             <div className="provider-name-title">
                 {provider.name}, {provider.title}
-                <div className="provider-desi">
+                <div className="provider-designation">
                     {provider.designation}
                 </div>
             </div>
