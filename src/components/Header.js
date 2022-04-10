@@ -23,7 +23,7 @@ function Header({location, locations, setSelectedLocation}) {
 
   return (
     <div>
-      <header className="app-header">
+      <header className="browse-header">
         <div className="header" >
           <p className="title">Browse our providers</p>
           <p className="subtitle">Mental Wellness</p>
