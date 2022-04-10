@@ -1,15 +1,22 @@
 .profile-container {
   background-color: #F6F7F7;
-  height: 100vh;
-  margin-bottom: 5px;
+  margin-left: 18%;
   padding: 10px;
 }
 
 .card {
   background-color: #FFFFFF;
-  width: 70%;
-  margin: 1.5rem;
+  width: 60%;
+  margin: 1.5rem 0 0 1.5rem;
   padding: 1.5rem;
+}
+
+.bot-card {
+  background-color: #FFFFFF;
+  width: 60%;
+  margin: 0 0 0 1.5rem;
+  padding: 1.5rem;
+  border-top: 2px solid #EEEEEE;
 }
 
 .profile-header {
@@ -24,65 +31,85 @@
 .profile-image {
   max-width: 300px;
   max-height: 300px;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border: 2px solid #EEEEEE;
 }
 
-.profile-name-title {
-  padding-left: 5px;
-}
-
-.bio {
+.profile-designation {
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 600;
   color: #6E7178;
   text-align: start;
   padding-bottom: 5px;
 }
 
+.profile-bio {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #6E7178;
+  text-align: start;
+  margin-bottom: 5px;
+}
+
 .detail-container {
   display: flex;
   align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.detail-sub {
+  padding-left: 5px;
 }
 
 .detail-label {
   color: #6E7178;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 }
 
 .detail-icon {
  padding: 5px;
+ background-color: #FAFAFA;
 }
 
 .detail {
-  color: #3F4145;
-}
-
-.breadLink {
   font-size: 0.75rem;
-  color: #6E7178
 }
 
-.breadCurrent {
+.bread-link {
+  font-size: 0.75rem;
+  color: #6E7178;
+}
+
+.bread-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bread-current {
   font-size: 0.75rem;
   font-weight: 600;
   color: #6E7178;
 }
 
-.breadLink:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.button {
+.read-more-button {
   color: #6277F0;
   background-color: transparent;
+  font-weight: 600;
   border: none;
   align-items: center;
   display: flex;
+  padding: 0;
 }
 
-.avatar {
-    border: 2px solid white;
+.booking-button {
+  color: white;
+  background-color: #4B286D;
+  font-size: 1.12em;
+  height: 2.7em;
+  border-radius: 98px;
+  border: none;
+  width: 100%;
+  margin: 15px 0px 8px 0px;
 }
 
 .flex {

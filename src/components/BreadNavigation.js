@@ -8,18 +8,21 @@ function BreadNavigation({profileTitle, setPage}) {
 
     return (
         <Breadcrumbs
-            aria-label="breadcrumb"
-            separator={<NavigateNextIcon fontSize="small" />}
+            aria-label="bread-crumb"
+            separator={
+                <NavigateNextIcon
+                fontSize="small"
+                htmlColor='#C6C9Cf'
+                />
+            }
         >
             <div
-                className="breadLink"
+                className="bread-link"
                 onClick={navigateToBrowse}
             >
                 Mental Wellness
-            </div>,
-            <div
-                className="breadCurrent"
-            >
+            </div>
+            <div className="bread-current">
                 {profileTitle}
             </div>
         </Breadcrumbs>
