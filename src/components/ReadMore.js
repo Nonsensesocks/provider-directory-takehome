@@ -19,11 +19,11 @@ function ReadMore(props) {
     if(!readMore) {
         return (
             <div>
-                <div className="bio">
+                <div className="profile-bio">
                     {truncateText(bio, 310)}
                 </div>
                 <button
-                    className="button"
+                    className="read-more-button"
                     onClick={readClick}
                 >
                     Read More <ExpandMoreIcon />
@@ -33,11 +33,11 @@ function ReadMore(props) {
     } else {
         return (
             <div>
-                <div className="bio">
+                <div className="profile-bio">
                     {bio}
                 </div>
                 <button
-                    className="button"
+                    className="read-more-button"
                     onClick={readClick}
                 >
                     Read Less <ExpandLessIcon />

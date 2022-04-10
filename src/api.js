@@ -130,7 +130,7 @@
      languages: ["English"],
      bio: "Marco is a Registered Social Worker. He has worked extensively in community mental health and has " +
        "counselled individuals experiencing depression, anxiety, bipolar disorder, schizophrenia, and borderline " +
-       "personality disorder. He views therapy as a partnership and likes to work collaboratively with clients to find" +
+       "personality disorder. He views therapy as a partnership and likes to work collaboratively with clients to find " +
        "what works for them. He often utilizes CBT, brief solution-focused, and narrative approaches to therapy."
    },
  ];
