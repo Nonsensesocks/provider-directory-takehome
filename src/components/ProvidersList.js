@@ -10,9 +10,9 @@ function ProviderList({location, localProviders, openProvider}){
         return (
             <div className="list">
                 <div className="provider-count">
-                    <span className="count">{numberOfProviders}</span> {providers} in {location}
+                    <span className="bold">{numberOfProviders}</span> {providers} in {location}
                 </div>
-                <div className="cards">
+                <div>
                     {(localProviders || []).map((provider, key) =>
                         <ProviderMini 
                           provider={provider}

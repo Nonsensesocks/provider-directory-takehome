@@ -4,6 +4,8 @@ import { truncateText } from '../utility/formatter';
 
 function ProviderMini({ provider, clickProvider }){
     const { availability, avatarUrl, bio } = provider
+    let providerNameTitle = `${provider.name}, ${provider.title}`
+    let providerNameTitleTruncate = truncateText(providerNameTitle, 30)
 
     function availabilityPresenter() {
         let avail = availability.replace('-',' ');
@@ -27,7 +29,7 @@ function ProviderMini({ provider, clickProvider }){
                 />
             </div>
             <div className="provider-name-title">
-                {provider.name}, {provider.title}
+                {providerNameTitleTruncate}
                 <div className="provider-designation">
                     {provider.designation}
                 </div>

@@ -3,8 +3,6 @@ import LocationOn from '@mui/icons-material/LocationOn';
 import { provinceAbbreviation } from '../utility/formatter';
 
 function LocationChip({selectedLocation, locationClick}) {
-
-
     return (
     <div className="container" onClick={locationClick} >
         <div className="location">
