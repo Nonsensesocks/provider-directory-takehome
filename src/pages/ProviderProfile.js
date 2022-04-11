@@ -39,8 +39,8 @@ function ProviderProfile({ provider, setPage }) {
                 <div className="flex">
                     <img src={defaultImage} alt="profile" className="profile-image"/>
                     <div>
-                        <div className="card">
-                            <div className="profile-header profile-name-title">
+                        <div className="top-card">
+                            <div className="profile-header">
                                 {providerName}, {title}
                             </div>
                             <div className="profile-designation">
@@ -48,24 +48,24 @@ function ProviderProfile({ provider, setPage }) {
                             </div>
                             <ReadMore text={bio} />
                         </div>
-                        <div className="bot-card">
+                        <div className="bottom-card">
                             <div className="detail-container">
                                 <MapIcon className="detail-icon" />
-                                <div className="detail-sub"> 
+                                <div className="padding-left-sm"> 
                                     <p className="detail-label">Location</p>
                                     <p className="detail">{location}</p>
                                 </div>
                             </div>
                             <div className="detail-container">
                                 <SchoolIcon className="detail-icon" />
-                                <div className="detail-sub"> 
+                                <div className="padding-left-sm"> 
                                     <p className="detail-label">Education</p>
                                     <p className="detail">{education}</p>
                                 </div>
                             </div>
                             <div className="detail-container">
                                 <LanguageIcon className="detail-icon"/>
-                                <div className="detail-sub"> 
+                                <div className="padding-left-sm"> 
                                     <p className="detail-label">Language</p>
                                     <p className="detail">{languagePresenter()}</p>
                                 </div>

@@ -1,54 +1,54 @@
 .profile-container {
-  background-color: #F6F7F7;
   margin-left: 18%;
   padding: 10px;
+  background-color: #F6F7F7;
 }
 
-.card {
-  background-color: #FFFFFF;
+.top-card {
   width: 60%;
   margin: 1.5rem 0 0 1.5rem;
   padding: 1.5rem;
+  background-color: #FFFFFF;
 }
 
-.bot-card {
-  background-color: #FFFFFF;
+.bottom-card {
   width: 60%;
   margin: 0 0 0 1.5rem;
   padding: 1.5rem;
+  background-color: #FFFFFF;
   border-top: 2px solid #EEEEEE;
 }
 
 .profile-header {
   display: flex;
+  padding-bottom: 5px;
+  text-align: start;
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
-  text-align: start;
-  padding-bottom: 5px;
 }
 
 .profile-image {
+  margin-top: 1.5rem;
   max-width: 300px;
   max-height: 300px;
-  margin-top: 1.5rem;
   border: 2px solid #EEEEEE;
 }
 
 .profile-designation {
+  padding-bottom: 5px;
+  text-align: start;
   font-size: 0.75rem;
   font-weight: 600;
   color: #6E7178;
-  text-align: start;
-  padding-bottom: 5px;
 }
 
 .profile-bio {
+  margin-bottom: 5px;
+  text-align: start;
   font-size: 0.75rem;
   font-weight: 400;
   color: #6E7178;
-  text-align: start;
-  margin-bottom: 5px;
 }
 
 .detail-container {
@@ -57,13 +57,9 @@
   margin-bottom: 0.75rem;
 }
 
-.detail-sub {
-  padding-left: 5px;
-}
-
 .detail-label {
-  color: #6E7178;
   font-size: 0.65rem;
+  color: #6E7178;
 }
 
 .detail-icon {
@@ -92,31 +88,23 @@
 }
 
 .read-more-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-weight: 600;
   color: #6277F0;
   background-color: transparent;
-  font-weight: 600;
   border: none;
-  align-items: center;
-  display: flex;
-  padding: 0;
 }
 
 .booking-button {
+  width: 100%;
+  height: 2.7em;
+  margin: 15px 0px 8px 0px;
+  font-size: 1.12em;
   color: white;
   background-color: #4B286D;
-  font-size: 1.12em;
-  height: 2.7em;
   border-radius: 98px;
   border: none;
-  width: 100%;
-  margin: 15px 0px 8px 0px;
   cursor: pointer;
-}
-
-.flex {
-  display: flex;
-}
-
-p {
-  margin: 0;
 }
