@@ -1,4 +1,4 @@
-import '../styles/Location.css';
+import '../styles/LocationMenu.css';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';

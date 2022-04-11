@@ -1,19 +1,9 @@
-import '../styles/Location.css';
+import '../styles/LocationMenu.css';
 import LocationOn from '@mui/icons-material/LocationOn';
+import { provinceAbbreviation } from '../utility/formatter';
 
 function LocationChip({selectedLocation, locationClick}) {
-  function locationAbbr(){
-      switch (selectedLocation) {
-      case('Ontario'):
-          return 'ON'
-      case('Quebec'):
-          return 'QC';
-      case('Alberta'):
-          return 'AB';
-      default:
-          return 'ON';
-      }
-  }
+
 
     return (
     <div className="container" onClick={locationClick} >
@@ -24,7 +14,7 @@ function LocationChip({selectedLocation, locationClick}) {
               fontSize="13px"
             />
             <label>
-                {selectedLocation && locationAbbr()}
+                {selectedLocation && provinceAbbreviation(selectedLocation)}
             </label>
         </div>
     </div>

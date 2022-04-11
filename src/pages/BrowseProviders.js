@@ -1,10 +1,9 @@
-import '../styles/ProvidersMain.css';
 import Header from '../components/Header'
 import ProvidersList from '../components/ProvidersList'
 
 function BrowseProviders({locations, selectedLocation, localProviders, setSelectedLocation, setSelectedProvider}) {
   return (
-    <div className="App">
+    <div>
         <div>
             <Header 
               setSelectedLocation={setSelectedLocation}
