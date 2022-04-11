@@ -1,31 +1,23 @@
-.container {
-  max-width: 3.7em;
-}
-
 .location {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FFFFFF;
-  color: #3F4145;
-  font-size: .75em;
-
-  border: 1px solid #EEEEEE;
-  box-sizing: border-box;
-  border-radius: 94px;
-
   max-height: 2.5em;
   max-width: 4.5em;
   padding: .7em;
+  font-size: .75em;
+  background: #FFFFFF;
+  color: #3F4145;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 94px;
 }
 
 .location:hover {
-  z-index:1;
   background-color: #EEEEEE;
   cursor: pointer;
 }
 
 .icon {
-  max-width: 1.5em;
   color: #6277F0;
 }

@@ -4,13 +4,11 @@ import ProvidersList from '../components/ProvidersList'
 function BrowseProviders({locations, selectedLocation, localProviders, setSelectedLocation, setSelectedProvider}) {
   return (
     <div>
-        <div>
-            <Header 
-              setSelectedLocation={setSelectedLocation}
-              location={selectedLocation}
-              locations={locations}
-            />
-        </div>
+      <Header 
+        setSelectedLocation={setSelectedLocation}
+        location={selectedLocation}
+        locations={locations}
+      />
       <ProvidersList
         location={selectedLocation}
         localProviders={localProviders}

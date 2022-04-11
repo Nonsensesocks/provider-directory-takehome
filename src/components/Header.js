@@ -22,36 +22,34 @@ function Header({location, locations, setSelectedLocation}) {
   }
 
   return (
-    <div>
-      <header className="browse-header">
-        <div className="header" >
-          <p className="title">Browse our providers</p>
-          <p className="subtitle">Mental Wellness</p>
-          <div id="locationChip">
-            <LocationChip
-              selectedLocation={location} 
-              locationClick={() => openLocationMenu()}
-            />
-          </div>
-        </div>        
-        {open && 
-          <Popover
-            open={open}
-            onClose={closeLocationMenu}
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-          >
-            <LocationMenu
-              locations={locations}
-              selectLocation={(location) => selectLocation(location)}
-            />
-          </Popover>
-        }
-      </header>
-    </div>
+    <header className="browse-header">
+      <div className="header" >
+        <p className="title">Browse our providers</p>
+        <p className="subtitle">Mental Wellness</p>
+        <div id="locationChip">
+          <LocationChip
+            selectedLocation={location} 
+            locationClick={() => openLocationMenu()}
+          />
+        </div>
+      </div>    
+      {open && 
+        <Popover
+          open={open}
+          onClose={closeLocationMenu}
+          anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+        >
+          <LocationMenu
+            locations={locations}
+            selectLocation={(location) => selectLocation(location)}
+          />
+        </Popover>
+      }
+    </header>
   );
 }
 

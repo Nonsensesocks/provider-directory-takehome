@@ -18,10 +18,10 @@ function App() {
 
   useEffect(() => {
     fetchProviders().then((result) => {
-        const filtered = result.filter(
-          ({location}) => (location.split(',')[1]).trim() === selectedLocation
-        )
-        setLocalProviders(filtered)
+      const filtered = result.filter(
+        ({location}) => (location.split(',')[1]).trim() === selectedLocation
+      )
+      setLocalProviders(filtered)
       }
     );
   }, [selectedLocation])
@@ -54,7 +54,7 @@ function App() {
           localProviders={localProviders}
           setSelectedLocation={setSelectedLocation}
           setSelectedProvider={openProvider}
-        />
+        />  
       </div>
     );
   } else if (page === 'viewProvider') {
